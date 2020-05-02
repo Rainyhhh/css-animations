@@ -1,0 +1,11 @@
+body { margin: 0; padding: 0; display: flex; justify-content: center; display:-webkit-flex; width: 100%; height: 100%; }
+.content { 
+	width: 500px; height: 400px; border: 2px solid #b9b9b9; margin-top: 30px; position: relative;
+}
+@media screen and (max-width: 500px) {
+	.content { transform: scale(0.8); transform-origin: calc(50vw - 201.6px); }
+	body { display: block; }
+}
+@media screen and (max-width: 400px) {
+	.content { transform: scale(0.6); transform-origin: calc(50vw - 151.2px); }
+}

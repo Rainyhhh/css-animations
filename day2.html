@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+	<head>
+		<title>day1</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/day2.css">
+	</head>
+	<body>
+		<div class="content">
+			<div class="board-border">
+				<div class="inner-board">
+					<span>12</span>
+					<span>1</span>
+					<span>2</span>
+					<span>3</span>
+					<span>4</span>
+					<span>5</span>
+					<span>6</span>
+					<span>7</span>
+					<span>8</span>
+					<span>9</span>
+					<span>10</span>
+					<span>11</span>
+				</div>
+			</div>
+			<div id="second"></div>
+			<div id="minute"></div>
+			<div id="hour"></div>
+			<div class="center"></div>	
+		</div>
+		<script>
+			var hour=document.getElementById("hour");
+      var min=document.getElementById("minute");
+      var sec=document.getElementById("second");
+      setInterval(function() {
+      	var date = new Date();
+        var curSec = date.getSeconds();
+        var curMin = date.getMinutes() + curSec / 60;
+        var curHour = date.getHours() + curMin / 60;
+        sec.style.WebkitTransform="rotate(" + curSec * 6 + "deg)";
+        min.style.WebkitTransform="rotate(" + curMin * 6 + "deg)";
+        hour.style.WebkitTransform="rotate(" + curHour * 30 + "deg)";
+      }, 1000);
+		</script>
+	</body>
+</html>
